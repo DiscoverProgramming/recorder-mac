@@ -1,2 +1,2 @@
 # recorder-mac
-A version of the first recorder but compatible with Mac.
+A version of the `recorder` but compatible with Mac.
