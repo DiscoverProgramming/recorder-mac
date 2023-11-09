@@ -22,7 +22,7 @@ class lib:
                 if input() == 's': # Check if s is pressed, if True, stop the program from capturing.
                     self.stop = True
                     print("Capture Stopped.")
-                    self.output_repeat = True
+                    self.output_repeat = False
                     self.get_input()
             else:
                 print("Press \'C\' to compile and quit the program. Press \'Q\' to quit the program without compiling.")
