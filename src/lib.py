@@ -1,10 +1,15 @@
-from threading import Thread
-import pyautogui
-import time
-import cv2
 import os
 import sys
+import time
+from threading import Thread
 
+import cv2
+import PIL
+import pyautogui
+import pyscreeze
+
+__PIL_TUPLE_VERSION = tuple(int(x) for x in PIL.__version__.split("."))
+pyscreeze.PIL__version__ = __PIL_TUPLE_VERSION
 class lib:
     def __init__(self, delay: float, start_index: int, dir: str, interval: float):
         self.stop = False
