@@ -21,21 +21,25 @@ class lib:
         self.output_repeat = True
 
     def get_input(self):
-        if self.output_repeat: print("Press the \'S\' key to stop capturing")
+        if self.output_repeat:
+            print("Press the \'S\' key to stop capturing")
+        else: 
+            print("Press \'C\' to compile and quit the program. Press \'Q\' to quit the program without compiling.")
+
         while True:
+            get_input = input()
             if not self.stop:
-                if input() == 's': # Check if s is pressed, if True, stop the program from capturing.
+                if get_input == 's': # Check if s is pressed, if True, stop the program from capturing.
                     self.stop = True
                     print("Capture Stopped.")
                     self.output_repeat = False
                     self.get_input()
             else:
-                print("Press \'C\' to compile and quit the program. Press \'Q\' to quit the program without compiling.")
-                if input() == 'c': # Check if c is pressed after s, if True, compile all the pictures into a video.
+                if get_input == 'c': # Check if c is pressed after s, if True, compile all the pictures into a video.
                     self.compile()
                     break
-                elif input() == 'q': # Check if q is pressed after s, if True, quit the program without compiling.
-                    break
+                elif get_input == 'q': # Check if q is pressed after s, if True, quit the program without compiling.
+                    sys.exit()
 
     # Function to generate the picture name.
 
