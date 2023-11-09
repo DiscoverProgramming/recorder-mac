@@ -63,7 +63,7 @@ class lib:
                     pyautogui.screenshot(self.dir + str(self.get_filename()) + '.png') # Take a screenshot.
                     # print('Captured Screenshot-' + str(self.index))
                     Thread(target=self.wait).start() # Create a interval wait time thread before taking another screenshot.
-            else: # If stop is True, output "Capture Ended." and stop the function.
+            else: 
                 break
 
     # Function to compile all the screenshots into a video.
