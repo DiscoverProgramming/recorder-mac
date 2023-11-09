@@ -61,7 +61,7 @@ class lib:
 
     def compile(self):
 
-        print("Compiling... this may take a couple minutes.")
+        print("Creating video... this may take a couple minutes.")
 
         # Create a list containing all the image directorys.
         images = [img for img in os.listdir(self.dir) if img.endswith(".png")]
@@ -92,7 +92,7 @@ class lib:
         cv2.destroyAllWindows()
         video.release()
 
-        print("Compilation Completed!")
+        print("Video Created Successfully!")
 
         # Close the program.
 
